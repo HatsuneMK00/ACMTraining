@@ -7,7 +7,7 @@ public class ProblemB {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n, k, reversePair;
+        int n, k;
         int[] nums = new int[100001];
         while (in.hasNext()) {
             n = in.nextInt();
@@ -16,7 +16,9 @@ public class ProblemB {
                 nums[i] = in.nextInt();
             }
 
-            System.out.println(Math.max((reversePair - k), 0));
+            mergeSort(nums, 0, n);
+            System.out.println(Math.max((reversePairCount - k), 0));
+            reversePairCount = 0;
         }
     }
 
@@ -48,7 +50,9 @@ public class ProblemB {
     public static void mergeSort(int[] nums, int start, int end) {
         int middle = (start + end) / 2;
         if (start < end) {
-
+            mergeSort(nums, start, middle);
+            mergeSort(nums, middle + 1, end);
+            merge(nums, start, end, middle);
         }
     }
 
