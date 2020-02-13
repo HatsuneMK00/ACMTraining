@@ -1,9 +1,20 @@
 package xyz.leetcode;
 
-import java.util.List;
+import xyz.leetcode.Problem21.ListNode;
 
-// TODO: 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的
-public class Problem21 {
+//TODO 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度
+public class Problem23 {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) {
+            return null;
+        }
+        ListNode head = lists[0];
+        for (int i = 1; i < lists.length; i++) {
+            head = mergeTwoLists(head, lists[i]);
+        }
+        return head;
+    }
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;
         if (l2 == null) return l1;
@@ -38,14 +49,5 @@ public class Problem21 {
             l2 = l2.next;
         }
         return head;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 }
