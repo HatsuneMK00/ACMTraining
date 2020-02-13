@@ -9,6 +9,7 @@ public class Problem34 {
         System.out.println(problem34.upperBound(ints, 0, 1,1));
     }
     public int[] searchRange(int[] nums, int target) {
+//        输入为空的情况一定要多注意
         if (nums.length == 0) {
             return new int[]{-1, -1};
         }
