@@ -1,5 +1,7 @@
 package xyz.tools;
 
+import java.util.Arrays;
+
 public class MyTools {
 //    TODO upperbound函数
     // 找到一个不严格升序数组内小于等于target的最大值索引
@@ -41,5 +43,26 @@ public class MyTools {
             return l+1;
         else
             return l;
+    }
+
+
+//    TODO 针对字符串的counting sort函数
+    //    使用计数排序对字符串中的字符按照升序排序，返回一个新的字符串
+    private static String countSort(String string) {
+        int[] b = new int[26];
+        int length = string.length();
+        for (int i = 0; i < length; i++) {
+            b[string.charAt(i) - 'a']++;
+        }
+        for (int i = 1; i < 26; i++) {
+            b[i] += b[i - 1];
+        }
+        char[] newStr = new char[length];
+        for (int i = length - 1; i >= 0; i--) {
+            int currentCharVal = string.charAt(i) - 'a';
+            b[currentCharVal]--;
+            newStr[b[currentCharVal]] = string.charAt(i);
+        }
+        return Arrays.toString(newStr);
     }
 }
