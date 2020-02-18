@@ -19,6 +19,7 @@ public class Problem98 {
         return valid;
     }
 
+
     public void inorderTraversalRecursive(TreeNode root, List<Integer> nums) {
         if (root == null) {
             return;
