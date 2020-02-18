@@ -3,20 +3,6 @@ package xyz.leetcode;
 import xyz.leetcode.Problem21.ListNode;
 
 public class Problem148 {
-    public static void main(String[] args) {
-        ListNode head = new ListNode(5);
-        ListNode current = head;
-        current.next = new ListNode(3);
-        current = current.next;
-        current.next = new ListNode(7);
-        Problem148 problem148 = new Problem148();
-        current = problem148.sortList(head);
-        while (current != null) {
-            System.out.print(current.val + " ");
-            current = current.next;
-        }
-    }
-
     public ListNode sortList(ListNode head) {
         quickSortLinkedList(head, null);
         return head;

@@ -3,11 +3,6 @@ package xyz.leetcode;
 import java.util.Arrays;
 
 public class Problem16 {
-    public static void main(String[] args) {
-        int[] nums = {1,1,1,1};
-        System.out.println(threeSumClosest(nums, 0));
-    }
-
     public static int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
         int numsLength = nums.length;

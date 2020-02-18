@@ -3,11 +3,6 @@ package xyz.leetcode;
 import java.util.HashMap;
 
 public class Problem76 {
-    public static void main(String[] args) {
-        Problem76 problem76 = new Problem76();
-        System.out.println(problem76.minWindow("ADOBECODEBANC", "ABC"));
-    }
-
     public String minWindow(String s, String t) {
         HashMap<Character, Integer> tMap = new HashMap<>();
         int lengthT = t.length();

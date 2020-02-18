@@ -1,11 +1,6 @@
 package xyz.leetcode;
 
 public class Problem38 {
-    public static void main(String[] args) {
-        Problem38 problem38 = new Problem38();
-        System.out.println(problem38.countAndSay(4));
-    }
-
     public String countAndSay(int n) {
         if (n == 1) {
             return "1";

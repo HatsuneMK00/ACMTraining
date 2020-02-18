@@ -2,18 +2,6 @@ package xyz.leetcode;
 
 //TODO 给定一个 n × n 的二维矩阵表示一个图像。将图像顺时针旋转 90 度。必须在原地旋转
 public class Problem48 {
-    public static void main(String[] args) {
-        int[] ints1 = {1, 2, 3};
-        int[] ints2 = {4, 5, 6};
-        int[] ints3 = {7, 8, 9};
-        int[][] ints = new int[3][3];
-        ints[0] = ints1;
-        ints[1] = ints2;
-        ints[2] = ints3;
-        Problem48 problem48 = new Problem48();
-        problem48.rotate(ints);
-    }
-
     public void rotate(int[][] matrix) {
         rotateRecursive(matrix, 0, 0, matrix.length);
     }

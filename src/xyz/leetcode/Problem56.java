@@ -5,11 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Problem56 {
-    public static void main(String[] args) {
-        Problem56 problem56 = new Problem56();
-        int[][] ints = new int[][]{new int[]{1, 4}, new int[]{0, 2}, new int[]{3, 5}};
-        System.out.println(Arrays.deepToString(problem56.merge(ints)));
-    }
     public int[][] merge(int[][] intervals) {
         if (intervals.length == 0) {
             return new int[0][];

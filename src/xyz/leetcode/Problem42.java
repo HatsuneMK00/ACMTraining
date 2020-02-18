@@ -1,12 +1,6 @@
 package xyz.leetcode;
 
 public class Problem42 {
-    public static void main(String[] args) {
-        Problem42 problem42 = new Problem42();
-        int[] ints = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        System.out.println(problem42.trap(ints));
-    }
-
     public int trap(int[] height) {
         int length = height.length;
         if (length == 0) {

@@ -5,11 +5,6 @@ import java.util.List;
 
 //TODO 给定一个没有重复数字的序列，返回其所有可能的全排列
 public class Problem46 {
-    public static void main(String[] args) {
-        Problem46 problem46 = new Problem46();
-        int[] ints = {1, 2, 3};
-        System.out.println(problem46.permute(ints));
-    }
     public List<List<Integer>> permute(int[] nums) {
         return permuteRecursive(nums, nums.length);
     }

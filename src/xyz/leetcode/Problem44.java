@@ -1,10 +1,6 @@
 package xyz.leetcode;
 
 public class Problem44 {
-    public static void main(String[] args) {
-        System.out.println(isMatch("ho", "ho**"));
-    }
-
     private static boolean isMatch(String s, String p) {
         int sLength = s.length();
         int pLength = p.length();

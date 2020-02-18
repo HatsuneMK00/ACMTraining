@@ -1,11 +1,6 @@
 package xyz.leetcode;
 
 public class Problem8 {
-    public static void main(String[] args) {
-        Problem8 problem8 = new Problem8();
-        System.out.println(Integer.parseInt("+42"));
-    }
-
     public int myAtoi(String str) {
         if (str == null) {
             return 0;

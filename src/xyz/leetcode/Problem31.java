@@ -3,15 +3,6 @@ package xyz.leetcode;
 import java.util.Arrays;
 
 public class Problem31 {
-    public static void main(String[] args) {
-        int[] nums = {1, 3, 2};
-        nextPermutation(nums);
-        for (int num : nums
-        ) {
-            System.out.println(num);
-        }
-    }
-
     public static void nextPermutation(int[] nums) {
         int j, i, minIndex, min;
         min = Integer.MAX_VALUE;

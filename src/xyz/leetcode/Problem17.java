@@ -7,11 +7,6 @@ import java.util.List;
 public class Problem17 {
     static HashMap<Character, List<String>> keyMap = new HashMap<>();
 
-    public static void main(String[] args) {
-        Problem17 problem17 = new Problem17();
-        System.out.println(problem17.letterCombinations("23"));
-    }
-
     static {
         keyMap.put('2', List.of("a", "b", "c"));
         keyMap.put('3', List.of("d", "e", "f"));

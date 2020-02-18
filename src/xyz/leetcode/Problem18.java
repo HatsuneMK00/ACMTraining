@@ -5,12 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Problem18 {
-    public static void main(String[] args) {
-        Problem18 problem18 = new Problem18();
-        System.out.println(problem18.fourSum(new int[]{-5, -4, -3, -2, 1, 3, 3, 5}, -11));
-    }
-
-    public List<List<Integer>> fourSum(int[] nums, int target) {
+     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> answer = new ArrayList<>();
         if (nums == null || nums.length < 4) {
             return answer;

@@ -4,10 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Problem13 {
-    public static void main(String[] args) {
-        Problem13 problem13 = new Problem13();
-        System.out.println(problem13.romanToInt("III"));
-    }
     static Map<Character, Integer> valMap = new HashMap<>();
 
     static {

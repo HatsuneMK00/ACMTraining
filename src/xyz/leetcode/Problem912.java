@@ -5,12 +5,6 @@ import java.util.List;
 
 
 public class Problem912 {
-    public static void main(String[] args) {
-        Problem912 problem912 = new Problem912();
-        int[] nums = new int[]{5, 2, 4, 3, 9, 7, 6};
-        System.out.println(problem912.sortArray(nums));
-    }
-
     public List<Integer> sortArray(int[] nums) {
         quickSort(nums, 0, nums.length);
         List<Integer> list = new ArrayList<>();

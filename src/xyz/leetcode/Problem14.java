@@ -3,10 +3,6 @@ package xyz.leetcode;
 import java.util.Arrays;
 
 public class Problem14 {
-    public static void main(String[] args) {
-        StringBuilder stringBuilder = new StringBuilder();
-        System.out.println(stringBuilder.toString());
-    }
     public String longestCommonPrefix(String[] strs) {
         StringBuilder stringBuilder = new StringBuilder();
         boolean same = true;

@@ -5,11 +5,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Problem22 {
-    public static void main(String[] args) {
-        Problem22 problem22 = new Problem22();
-        System.out.println(problem22.generateParenthesis(2));
-    }
-
     public List<String> generateParenthesis(int n) {
         StringBuilder stringBuilder = new StringBuilder();
         List<String> answer = new ArrayList<>();

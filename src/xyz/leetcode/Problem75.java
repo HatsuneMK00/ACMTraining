@@ -1,11 +1,6 @@
 package xyz.leetcode;
 
 public class Problem75 {
-    public static void main(String[] args) {
-        Problem75 problem75 = new Problem75();
-        int[] ints = {2, 0, 2, 1, 1, 0};
-        problem75.sortColors(ints);
-    }
     public void sortColors(int[] nums) {
         int zeroIndex = 0;
         int oneIndex = 0;

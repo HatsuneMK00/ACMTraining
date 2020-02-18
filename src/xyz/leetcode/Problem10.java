@@ -1,10 +1,6 @@
 package xyz.leetcode;
 
 public class Problem10 {
-    public static void main(String[] args) {
-        System.out.println(isMatch("aa", "a.*"));
-    }
-
     private static boolean isMatch(String s, String p) {
         int sLength = s.length();
         int pLength = p.length();

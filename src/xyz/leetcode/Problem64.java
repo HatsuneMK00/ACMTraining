@@ -1,10 +1,6 @@
 package xyz.leetcode;
 
 public class Problem64 {
-    public static void main(String[] args) {
-
-    }
-
     public static int minPathSum(int[][] grid) {
         if (grid == null) {
             return 0;
