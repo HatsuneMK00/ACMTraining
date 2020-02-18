@@ -3,7 +3,7 @@ package xyz.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO 给定一个没有重复数字的序列，返回其所有可能的全排列
+//TOOL 给定一个没有重复数字的序列，返回其所有可能的全排列
 public class Problem46 {
     public List<List<Integer>> permute(int[] nums) {
         return permuteRecursive(nums, nums.length);

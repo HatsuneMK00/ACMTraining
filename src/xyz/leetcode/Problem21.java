@@ -2,7 +2,7 @@ package xyz.leetcode;
 
 import java.util.List;
 
-// TODO: 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的
+// TOOL: 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的
 public class Problem21 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;

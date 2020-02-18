@@ -1,6 +1,6 @@
 package xyz.leetcode;
 
-//TODO 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置
+//TOOL 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置
 public class Problem34 {
     public int[] searchRange(int[] nums, int target) {
 //        输入为空的情况一定要多注意

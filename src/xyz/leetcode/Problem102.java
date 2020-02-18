@@ -5,6 +5,7 @@ import xyz.leetcode.Problem94.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
+// TOOL 返回树的层次遍历结果 结果为二维数组 按层划分
 public class Problem102 {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> nums = new ArrayList<>();

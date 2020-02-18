@@ -2,7 +2,7 @@ package xyz.leetcode;
 
 import java.util.Stack;
 
-// TODO： 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效
+// TOOL： 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效
 public class Problem20 {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();

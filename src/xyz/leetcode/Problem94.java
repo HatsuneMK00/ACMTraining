@@ -3,7 +3,7 @@ package xyz.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO 给定一个二叉树，返回它的中序遍历
+//TOOL 给定一个二叉树，返回它的中序遍历
 public class Problem94 {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> nums = new ArrayList<>();

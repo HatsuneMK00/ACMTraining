@@ -32,7 +32,7 @@ public class Problem148 {
         return i;
     }
 
-//    TODO: 在单链表中交换i和j 只交换节点的值即可
+//    TOOL: 在单链表中交换i和j 只交换节点的值即可
     void swap(ListNode a, ListNode b) {
         int temp = a.val;
         a.val = b.val;

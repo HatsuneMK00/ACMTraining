@@ -3,7 +3,7 @@ package xyz.tools;
 import java.util.Arrays;
 
 public class MyTools {
-//    TODO upperbound函数
+//    TOOL upperbound函数
     // 找到一个不严格升序数组内小于等于target的最大值索引
     // 如果没有找到符合要求的元素 则会返回-1
     // l为数组起始索引，r为数组结束索引
@@ -25,7 +25,7 @@ public class MyTools {
         }
     }
 
-//    TODO lowerbound函数
+//    TOOL lowerbound函数
     // 找到一个不严格升序数组内大于等于target的最小值索引
     // 如果没有找到符合要求的元素 则会返回nums.length
     // l为数组起始索引，r为数组结束索引
@@ -46,7 +46,7 @@ public class MyTools {
     }
 
 
-//    TODO 针对字符串的counting sort函数
+//    TOOL 针对字符串的counting sort函数
     //    使用计数排序对字符串中的字符按照升序排序，返回一个新的字符串
     private static String countSort(String string) {
         int[] b = new int[26];

@@ -2,7 +2,7 @@ package xyz.leetcode;
 
 import java.util.Arrays;
 
-//TODO 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一
+//TOOL 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一
 public class Problem66 {
     //    除了整数0外，不会以0开头
     public int[] plusOne(int[] digits) {

@@ -1,6 +1,6 @@
 package xyz.leetcode;
 
-//TODO 合并两个有序数组
+//TOOL 合并两个有序数组
 public class Problem88 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int[] nums = new int[m + n];
