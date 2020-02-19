@@ -5,11 +5,8 @@ import xyz.leetcode.Problem94.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-// TOOL 返回树的层次遍历结果 结果为二维数组 按层划分
-// 注意层次遍历可能更应该拿广度优先搜索来写
-// 前中后序搜索都属于深度优先搜索
-public class Problem102 {
-    public List<List<Integer>> levelOrder(TreeNode root) {
+public class Problem103 {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> nums = new ArrayList<>();
         preOrderTraversal(root, 0, nums);
         return nums;
@@ -22,7 +19,11 @@ public class Problem102 {
         if (nums.size() <= depth) {
             nums.add(new ArrayList<Integer>());
         }
-        nums.get(depth).add(root.val);
+        if (depth % 2 == 0) {
+            nums.get(depth).add(root.val);
+        } else {
+            nums.get(depth).add(0, root.val);
+        }
         preOrderTraversal(root.left, depth + 1, nums);
         preOrderTraversal(root.right, depth + 1, nums);
     }
