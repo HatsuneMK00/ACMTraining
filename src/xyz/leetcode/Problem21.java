@@ -46,6 +46,7 @@ public class Problem21 {
 
         ListNode(int x) {
             val = x;
+            next = null;
         }
     }
 }
