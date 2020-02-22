@@ -35,7 +35,7 @@ public class Problem210 {
         }
     }
 
-    //    TOOL 有向图的深度优先搜索并构造拓扑序
+    //    TOOL 有向图的深度优先搜索并构造拓扑序(如果存在)
 //    只用于检测有向图中是否有环路 返回拓扑序 不构建深度搜索树（前驱子树）
     boolean DFSSearch(Map<Node, List<Node>> graph) {
         boolean result = true;
