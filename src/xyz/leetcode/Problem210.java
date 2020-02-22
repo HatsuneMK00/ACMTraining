@@ -1,16 +1,18 @@
 package xyz.leetcode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-public class Problem207 {
+import static xyz.leetcode.Problem207.*;
+
+public class Problem210 {
     int time = 0;
-
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
         if (prerequisites.length == 0) {
-            return true;
+            int[] answer = new int[numCourses];
+            for (int i = 0; i < numCourses; i++) {
+                answer[i] = i;
+            }
+            return answer;
         }
         HashMap<Integer, Node> nodes = new HashMap<>();
 //        课程编号是按顺序来的 直接插入nodes就行
@@ -18,11 +20,23 @@ public class Problem207 {
             nodes.put(i, new Node(i));
         }
         Map<Node, List<Node>> graph = initialGraph(prerequisites, nodes);
-        return DFSSearch(graph);
+        if (DFSSearch(graph)) {
+            PriorityQueue<Node> queue = new PriorityQueue<>((o1, o2) -> o2.f - o1.f);
+            int[] answer = new int[numCourses];
+            int i = 0;
+            queue.addAll(nodes.values());
+            while (!queue.isEmpty()) {
+                Node node = queue.poll();
+                answer[i++] = node.node;
+            }
+            return answer;
+        } else {
+            return new int[0];
+        }
     }
 
-//    TOOL 有向图的深度优先搜索
-//    只用于检测有向图中是否有环路 不返回拓扑序 不构建深度搜索树（前驱子树）
+    //    TOOL 有向图的深度优先搜索并构造拓扑序
+//    只用于检测有向图中是否有环路 返回拓扑序 不构建深度搜索树（前驱子树）
     boolean DFSSearch(Map<Node, List<Node>> graph) {
         boolean result = true;
         for (Node node : graph.keySet()) {
@@ -65,24 +79,5 @@ public class Problem207 {
             nodeList.add(nodes.get(prerequisite[0]));
         }
         return map;
-    }
-
-    //    给DFS搜索使用的结点
-    public static class Node {
-        int node;
-//        发现时间
-        int d;
-//        处理完成时间
-        int f;
-//        结点颜色
-//        0 为白色
-//        1 为灰色
-//        2 为黑色
-        int color = 0;
-//        int pi; 前驱节点
-
-        public Node(int node) {
-            this.node = node;
-        }
     }
 }
