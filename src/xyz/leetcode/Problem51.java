@@ -4,27 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem51 {
-    public static void main(String[] args) {
-        Problem51 problem51 = new Problem51();
-        System.out.println(problem51.solveNQueens(4));
-    }
-    public List<List<String>> solveNQueens(int n) {
-        List<List<String>> answer = new ArrayList<>();
+    public int solveNQueens(int n) {
+        int[] answer = new int[1];
         List<StringBuilder> board = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             board.add(new StringBuilder().append(".".repeat(n)));
         }
         solveNQueensRecursive(n, answer, 0, board);
-        return answer;
+        return answer[0];
     }
 
-    private void solveNQueensRecursive(int n, List<List<String>> answer, int row, List<StringBuilder> board) {
+    private void solveNQueensRecursive(int n, int[] answer, int row, List<StringBuilder> board) {
         if (row == n) {
-            List<String> boardString = new ArrayList<>();
-            for (int i = 0; i < n; i++) {
-                boardString.add(board.get(i).toString());
-            }
-            answer.add(boardString);
+            answer[0]++;
             return;
         }
         for (int i = 0; i < n; i++) {
