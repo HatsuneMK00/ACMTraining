@@ -14,6 +14,7 @@ public class Problem912 {
         return list;
     }
 
+//    TOOL 快速排序中的数组划分子程序 升序
     int partition(int[] nums, int start, int end) {
 //        首元素作为pivot
         int pivot = nums[start];
