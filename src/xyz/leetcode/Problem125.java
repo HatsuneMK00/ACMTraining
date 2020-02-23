@@ -1,5 +1,6 @@
 package xyz.leetcode;
 
+// TOOL 判断字符串是否是回文
 public class Problem125 {
     public boolean isPalindrome(String s) {
         if (s.length() == 0) {
