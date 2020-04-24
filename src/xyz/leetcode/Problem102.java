@@ -23,23 +23,22 @@ public class Problem102 {
         while (!(queue1.isEmpty() && queue2.isEmpty())) {
             result.add(new ArrayList<>());
             if (level % 2 == 0) {
-                while (!queue1.isEmpty()) {
-                    TreeNode node = queue1.poll();
-                    result.get(level).add(node.val);
-                    if (node.left != null) queue2.add(node.left);
-                    if (node.right != null) queue2.add(node.right);
-                }
-                level++;
+                level = traverseAndGetLevel(queue1, queue2, result, level);
             } else {
-                while (!queue2.isEmpty()) {
-                    TreeNode node = queue2.poll();
-                    result.get(level).add(node.val);
-                    if (node.left != null) queue1.add(node.left);
-                    if (node.right != null) queue1.add(node.right);
-                }
-                level++;
+                level = traverseAndGetLevel(queue2, queue1, result, level);
             }
         }
         return result;
+    }
+
+    private int traverseAndGetLevel(Queue<TreeNode> queue1, Queue<TreeNode> queue2, List<List<Integer>> result, int level) {
+        while (!queue1.isEmpty()) {
+            TreeNode node = queue1.poll();
+            result.get(level).add(node.val);
+            if (node.left != null) queue2.add(node.left);
+            if (node.right != null) queue2.add(node.right);
+        }
+        level++;
+        return level;
     }
 }
