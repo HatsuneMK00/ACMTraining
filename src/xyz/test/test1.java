@@ -9,8 +9,7 @@ import java.util.Scanner;
 
 public class test1 {
     public static void main(String[] args) throws IOException {
-        int[] nums = {-4, -2};
-        System.out.println(upperBound(nums, 0, nums.length - 1, -6));
+
     }
 
     private static int upperBound(int[] nums, int l, int r, int target) {
