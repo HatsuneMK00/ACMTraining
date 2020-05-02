@@ -1,4 +1,4 @@
-package xyz.leetcode.arrayproblem;
+package xyz.leetcode.algorithmarray;
 
 public class MinSubArrayLen {
 
