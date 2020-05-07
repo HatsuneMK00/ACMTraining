@@ -4,9 +4,6 @@ import java.util.HashMap;
 
 // 回旋镖的数量
 public class NumberOfBoomerangs {
-    public static void main(String[] args) {
-        new NumberOfBoomerangs().numberOfBoomerangs(new int[][]{new int[]{0, 0}, new int[]{1, 0}, new int[]{2, 0}});
-    }
     public int numberOfBoomerangs(int[][] points) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int answer = 0;
