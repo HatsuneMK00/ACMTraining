@@ -1,12 +1,10 @@
 package xyz.leetcode.algorithmsearchtable;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 //直线上最多的点数
 public class MaxPoints {
-    public static void main(String[] args) {
-        new MaxPoints().maxPoints(new int[][]{new int[]{1, 1}, new int[]{2, 2}, new int[]{3, 3}});
-    }
 
     public int maxPoints(int[][] points) {
         HashMap<Double, Integer> map = new HashMap<>();
