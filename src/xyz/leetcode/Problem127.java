@@ -9,12 +9,6 @@ import java.util.PriorityQueue;
 // 需要进行高效的预处理
 // TODO 重做本题 看懂如何进行预处理寻找邻居和广度优先搜索
 public class Problem127 {
-    public static void main(String[] args) {
-        Problem127 problem127 = new Problem127();
-        List<String> wordList = List.of("hot", "dot", "dog", "lot", "log", "cog");
-        System.out.println(problem127.ladderLength("hit", "cog", wordList));
-    }
-
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         int v = -1;
         for (int i = 0; i < wordList.size(); i++) {

@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem131 {
-    public static void main(String[] args) {
-        Problem131 problem131 = new Problem131();
-        System.out.println(problem131.partition("aab"));
-    }
     public List<List<String>> partition(String s) {
         List<List<String>> answer = new ArrayList<>();
         partitionRecursive(s, 0, s.length(), answer);

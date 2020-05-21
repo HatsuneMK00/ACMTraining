@@ -8,10 +8,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class test1 {
-    public static void main(String[] args) throws IOException {
-
-    }
-
     private static int upperBound(int[] nums, int l, int r, int target) {
         while (l < r) {
             int m = (l + r + 1) / 2;

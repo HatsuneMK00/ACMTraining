@@ -6,9 +6,6 @@ import java.util.List;
 
 public class PrintListFromTailToHead {
 
-    public static void main(String[] args) {
-        new PrintListFromTailToHead().reverse(Arrays.asList(1, 2, 3));
-    }
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ListNode current = listNode;
         List<Integer> answer = new ArrayList<>();
